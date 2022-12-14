@@ -1,7 +1,14 @@
 <script>
-	import Header from './Header.svelte';
+	import Header from '../lib/Header.svelte';
 	import '/src/lib/css/global.css';
 </script>
+
+<svelte:head>
+	<title>Never Stay Starving</title>
+
+	<meta name="description" content="Everybody Eats" />
+	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</svelte:head>
 
 <div class="app">
 	<Header />
@@ -11,7 +18,7 @@
 	</main>
 
 	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+		<p>Never Stay Starving, Inc. 2022 </p>
 	</footer>
 </div>
 
