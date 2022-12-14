@@ -25,7 +25,7 @@ import{fly} from 'svelte/transition';
 <svelte:window on:scroll={updateY} bind:scrollY={y}/>
 
 
-<!-- {#if oldY > y } -->
+{#if oldY > y }
 <header class = 'page-header' in:fly={{ x: -400}} out:fly={{x:400}}>
 	<div class='logo'>
         
@@ -41,7 +41,7 @@ import{fly} from 'svelte/transition';
 
 	</ul>
   </header>
-<!-- {/if} -->
+{/if}
 <div id="spacer1"></div>
 
 
