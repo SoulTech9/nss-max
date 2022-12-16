@@ -1,32 +1,22 @@
 <script>
 import{fly} from 'svelte/transition';
-    /**
-     * @type {number}
-     */
-    let y;
-    // @ts-ignore
-    let newY = [];
-   // @ts-ignore
-     $: oldY = newY[1];
-    
-    // @ts-ignore
-    function updateY(event){
-        // @ts-ignore
-        newY.push(y);
-        if(newY.length > 25) {
-            // @ts-ignore
-            newY.shift();
-        }
-        // @ts-ignore
-        newY=newY;
+    let y = 0 ;
+    let lastY = 0;
+    let isScrollingDown = false;
+    function onScroll(val){
+        isScrollingDown = (lastY < val)
+        lastY = val;
     }
+    $: console.log(y)
+    $ : onScroll(y)
+
 </script>
 
-<svelte:window on:scroll={updateY} bind:scrollY={y}/>
+<svelte:window bind:scrollY={y}/>
 
 
-{#if oldY > y }
-<header class = 'page-header' in:fly={{ x: -400}} out:fly={{x:400}}>
+{#if !isScrollingDown }
+<header class = 'page-header' in:fly={{ x: -400, duration: 1000}} out:fly={{x:400, duration: 1000}}>
 	<div class='logo'>
         
 		<img src='/images/logo.png' alt="logo" />
@@ -42,7 +32,7 @@ import{fly} from 'svelte/transition';
 	</ul>
   </header>
 {/if}
-<div id="spacer1"></div>
+<!-- <div id="spacer1"></div> -->
 
 
 

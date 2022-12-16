@@ -1,13 +1,13 @@
 <script>
     import {fly} from 'svelte/transition';
-
+    let x;
 </script>
-
+<svelte:window bind:scrollY={x}/>
 <div class="about-box">
-    
-    <img id=ing1 alt='ingredient' in:fly={{ x: -400}} src="/images/Jumbotron/a1.png"/>
-    <img id=ing2 alt='ingredient' in:fly={{ x: 400}} src="/images/Jumbotron/a8.png"/>
-    
+    {#if x > 120 }         
+    <img id=ing1 alt='ingredient' in:fly={{ x: -400,duration: 800 }} out:fly={{x:-400, duration: 2000}}  src="/images/Jumbotron/a1.png"/>
+    <img id=ing2 alt='ingredient' in:fly={{ x: 400, duration: 800}} out:fly={{x:400, duration: 2000}} src="/images/Jumbotron/a8.png"/>
+    {/if}
 
     <p id="aboutp" in:fly={{y: 400}}>When you combine Carribean, Southern Comfort, Latin and other exotic soul dishes, you begin
         your journey to Never Stay Starving. Its all about satisfying your crave for a unique and delicious 5

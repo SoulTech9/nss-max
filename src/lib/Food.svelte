@@ -1,15 +1,23 @@
-<div class="food-box">
-    <img id=ing3 alt='ingredient' src="/images/Jumbotron/a9.png"/>
-        <h1 id="food-title">
-            FEATURED MENUS</h1>
+<script>import {fly} from 'svelte/transition'
+    let w;
+    </script>
+<svelte:window bind:scrollY={w}/>
 
-        <div class="menupic-row">
-            
-             <img class="dimg" alt= 'brunch menu'src="/images/ft-food1.png" />
-           <img class="dimg" alt= 'appetizer menu' src="/images/ft-food1.png" />
-           <img class="dimg" alt= 'dinner menu' src="/images/ft-food1.png" />
-            
+
+<div class="food-box">
+   {#if w> 850}  <img id=ing3 alt='ingredient' in:fly= {{x:-400, duration: 600}} out:fly={{x:400}} src="/images/Jumbotron/a9.png"/> {/if}
+
+   {#if w> 1150}  <img id=ing4 alt='ingredient' in:fly= {{x:400, duration: 870}} out:fly={{x:400}} src="/images/Jumbotron/a4.png"/> {/if}
+        <h1 id="food-title">
+            Featured Menus</h1>
+
+        {#if w > 560}
+        <div class="menupic-row">          
+            <img class="dimg" alt= 'brunch menu' in:fly= {{x:400}} out:fly={{x:400}} src="/images/brunch.jpg" />
+           <img class="dimg" alt= 'appetizer menu' in:fly={{y:400}} out:fly={{y:400}} src="/images/appetizers.jpg" />
+           <img class="dimg" alt= 'dinner menu' in:fly={{x:-400}} out:fly={{x:-400}} src="/images/dinner.jpg" />            
         </div>
+        {/if}
         <div class="menutext-row">
             <a class="amenu" href='/menu'><h3 id="dtitle">BRUNCH</h3></a>
             <a class="amenu" href='/menu'><h3 id="dtitle">APPETIZERS</h3></a>
@@ -19,12 +27,23 @@
         </div>
 
         <style>
-            #ing3{
+        
+          
+          #ing3{
         position: absolute;
-        width: 20%;
-        top: 5.5em;
+        width: 25%;
+        top: 24.5em;
         left: -4em;
         transform: rotate(50deg);
+    }
+          
+          #ing4{
+        position: absolute;
+        width: 15%;
+        top: 46.5em;
+        left: 61em;
+        transform: rotate(7deg); /*breaks page at 8deg or more*/
+        
     }
             .food-box{
                 position: relative;
@@ -53,12 +72,36 @@
     display: flex;
     width: 100%;
     justify-content: space-around;
-    color: #ffffff;
+
+    
+}
+
+#food-title{
+    color:#fff;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 40px;
+    opacity: .93;
 }
 
 
 .dimg{
     max-width: 20em;
+    border: solid 8px;
+    border-image-source: url(/images/bl123.jpg);
+    border-image-slice: 10 30;
+    animation: bordertxtr 5s linear infinite alternate;
+}
+@keyframes bordertxtr {
+    from {
+        border-image-slice: 60 100;
+    }
+
+    to {
+        border-image-slice:60 30;
+    }
+
+
     /* clip-path: polygon(50% 5%, 61% 35%, 85% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 11% 35%, 39% 35%); */
 }
 

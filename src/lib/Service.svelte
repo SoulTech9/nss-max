@@ -1,13 +1,19 @@
-<script>import {fly} from 'svelte/transition'</script>
+<script>import {fly} from 'svelte/transition'
+let z;</script>
+
+<svelte:window bind:scrollY={z}/>
 <div class="service-box">
     <h1 id="service-title">
         SERVICES
     </h1>
+
+    {#if z > 150 } 
     <div class="img-icons">
         <img alt='chef icon' id="service-img1" in:fly= {{x:400}} src="/images/service-icon1.png" />
         <img alt='vip table icon' id="service-img2" in:fly={{y:-400}} src='/images/service-icon2.png' />
         <img alt= 'car icon' id="service-img3" in:fly= {{x:-400}} src='./images/service-icon3.png' />
     </div>
+    {/if}
     <div class="stitle-row">
         <h3 id="stitle1">CATORING</h3>
         <h3 id="stitle2">EVENT HOSTING</h3>
