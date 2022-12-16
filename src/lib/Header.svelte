@@ -25,9 +25,9 @@ import{fly} from 'svelte/transition';
   
 	<ul class="nav">
 		<li class="nav-list"><a href="/">MAIN</a></li>
-		<li class="nav-list"><a href="/">SERVICES</a></li>
-		<li class="nav-list"><a href="/">MENU</a></li>
-		<li class="nav-list"><a href="/">CONTACT</a></li>
+		<li class="nav-list"><a href="/services">SERVICES</a></li>
+		<li class="nav-list"><a href="/menu">MENU</a></li>
+		<li class="nav-list"><a href="/contact">CONTACT</a></li>
 
 	</ul>
   </header>
