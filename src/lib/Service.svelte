@@ -9,9 +9,9 @@ let z;</script>
 
     {#if z > 150 } 
     <div class="img-icons">
-        <img alt='chef icon' id="service-img1" in:fly= {{x:400}} src="/images/service-icon1.png" />
-        <img alt='vip table icon' id="service-img2" in:fly={{y:-400}} src='/images/service-icon2.png' />
-        <img alt= 'car icon' id="service-img3" in:fly= {{x:-400}} src='./images/service-icon3.png' />
+        <img alt='chef icon' id="service-img1" in:fly|local= {{x:400}} src="/images/service-icon1.png" />
+        <img alt='vip table icon' id="service-img2" in:fly|local={{y:-400}} src='/images/service-icon2.png' />
+        <img alt= 'car icon' id="service-img3" in:fly|local= {{x:-400}} src='./images/service-icon3.png' />
     </div>
     {/if}
     <div class="stitle-row">
@@ -19,7 +19,7 @@ let z;</script>
         <h3 id="stitle2">EVENT HOSTING</h3>
         <h3 id="stitle3">DELIVERY</h3>
     </div>
-    <div class="stext-row" in:fly= {{x:400}}>
+    <div class="stext-row" in:fly|local= {{x:400}}>
         <p class='text-format' id="stext1">5 star personal chef brings you the flavor you need to calm the crave. </p> 
         <p class='text-format' id="stext2">Full service package includes event space, DJ and more. </p>
         <p class='text-format' id="stext3"> Mouth watering extravaganza brought to your doorsteps (in select areas only). </p>

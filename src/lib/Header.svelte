@@ -16,7 +16,7 @@ import{fly} from 'svelte/transition';
 
 
 {#if !isScrollingDown }
-<header class = 'page-header' in:fly={{ x: -400, duration: 1000}} out:fly={{x:400, duration: 1000}}>
+<header class = 'page-header' in:fly|local ={{ x: -400, duration: 1000}} out:fly|local={{x:400, duration: 1000}}>
 	<div class='logo'>
         
 		<img src='/images/logo.png' alt="logo" />

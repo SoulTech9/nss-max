@@ -5,17 +5,17 @@
 
 
 <div class="food-box">
-   {#if w> 850}  <img id=ing3 alt='ingredient' in:fly= {{x:-400, duration: 600}} out:fly={{x:400}} src="/images/Jumbotron/a9.png"/> {/if}
+   {#if w> 850}  <img id=ing3 alt='ingredient' in:fly|local= {{x:-400, duration: 600}} out:fly|local={{x:400}} src="/images/Jumbotron/a9.png"/> {/if}
 
-   {#if w> 1150}  <img id=ing4 alt='ingredient' in:fly= {{x:400, duration: 870}} out:fly={{x:400}} src="/images/Jumbotron/a4.png"/> {/if}
+   {#if w> 1150}  <img id=ing4 alt='ingredient' in:fly|local= {{x:400, duration: 870}} out:fly|local={{x:400}} src="/images/Jumbotron/a4.png"/> {/if}
         <h1 id="food-title">
             Featured Menus</h1>
 
         {#if w > 560}
         <div class="menupic-row">          
-            <img class="dimg" alt= 'brunch menu' in:fly= {{x:400}} out:fly={{x:400}} src="/images/brunch.jpg" />
-           <img class="dimg" alt= 'appetizer menu' in:fly={{y:400}} out:fly={{y:400}} src="/images/appetizers.jpg" />
-           <img class="dimg" alt= 'dinner menu' in:fly={{x:-400}} out:fly={{x:-400}} src="/images/dinner.jpg" />            
+            <img class="dimg" alt= 'brunch menu' in:fly|local= {{x:400}} out:fly|local={{x:400}} src="/images/brunch.jpg" />
+           <img class="dimg" alt= 'appetizer menu' in:fly|local={{y:400}} out:fly|local={{y:400}} src="/images/appetizers.jpg" />
+           <img class="dimg" alt= 'dinner menu' in:fly|local={{x:-400}} out:fly|local={{x:-400}} src="/images/dinner.jpg" />            
         </div>
         {/if}
         <div class="menutext-row">

@@ -9,8 +9,8 @@
     
     {#if u > -1 }         
      
-     <p class="heading1" in:fly={{ y: -400,duration: 800 }} out:fly={{x:-400, duration: 2000}} > CH-CHEF <br/> HELLO !!!</p> 
-     <button id='order' type= 'button'in:fly={{ y: 400,duration: 800 }} out:fly={{x:-400, duration: 2000}} > CONTACT US</button>
+     <p class="heading1" in:fly|local={{ y: -400,duration: 800 }} out:fly|local={{x:-400, duration: 2000}} > CH-CHEF <br/> HELLO !!!</p> 
+     <button id='order' type= 'button'in:fly|local={{ y: 400,duration: 800 }} out:fly|local={{x:-400, duration: 2000}} > CONTACT US</button>
      {/if}
     </div>
     </div>
