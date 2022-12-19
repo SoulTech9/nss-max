@@ -18,7 +18,7 @@ overflow-x: scroll;
 justify-items: space-around;
 
 
-background-image: url(/images/Jumbotron/14646.jpg);
+background-color:whitesmoke;
 } 
 
 .spacer{
