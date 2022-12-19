@@ -50,9 +50,9 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    /* margin-top: 1em; */
+
     font-family: 'Roboto', sans-serif;
-    /* overflow: hidden; */
+ 
     background-image: url(/images/foodbg2.jpg);
     background-attachment: fixed;
     background-position: center;
