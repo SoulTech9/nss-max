@@ -1,8 +1,7 @@
 <script>
     import{fly} from 'svelte/transition';
-    import ContactForm from "$lib/ContactForm.svelte";
-    import About from "$lib/About.svelte"
-    import Service from "$lib/Service.svelte";
+    import ContactForm2 from "$lib/ContactForm2.svelte";
+  
     let xs;
 </script>
 <div class ='spacer2'></div>
@@ -12,7 +11,7 @@
 <div class= container2>
 <div class= 'service2'>
     <div class='avideo'><iframe
-        class= 'ytvid' width="560" height="315" src="https://www.youtube.com/embed/ckUcSvy4PBI"
+        class= 'ytvid' width="560" height="315" src="https://www.youtube.com/embed/_D-CziFpt9E"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe></div>
@@ -37,9 +36,14 @@
 </div>
 </div>
 {/if}
-<ContactForm />
+
+<ContactForm2 />
 
 <style>
+    
+
+
+
     .par2{
         max-width: 50%;
         margin-top: -10px;

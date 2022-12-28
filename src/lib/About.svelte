@@ -14,7 +14,7 @@
         star experience. This is why we bring you the Creme de la Creme , presenting you with an elite selection
         that can gratify the appetite of any sized event, gathering, or celebration. Bon Apetite! </p> 
         <div class='avideo'><iframe
-        class= 'ytvid' width="560" height="315" src="https://www.youtube.com/embed/ckUcSvy4PBI"
+        class= 'ytvid' width="560" height="315" src="https://www.youtube.com/embed/_D-CziFpt9E"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe></div>
@@ -33,15 +33,17 @@
 #ing1{
         position: absolute;
         width: 25%;
-        top: 6.3em;
+        top: 30%;
         transform: rotate(-5deg);
+        flex-shrink: 3;
+       
     }
 
     #ing2{
         position: absolute;
         width: 20%;
-        top: 5.5em;
-        left: 25em;
+        top: 25%;
+        left: 35%;
         transform: rotate(4deg);
     }
 

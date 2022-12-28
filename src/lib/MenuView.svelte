@@ -1,7 +1,7 @@
 <script>
 	import {fade} from 'svelte/transition'
 
-	let click;
+	
 	let clicked ='';
   let img0 = '/images/brunchmenu.png';
   let img1 = '/images/appetizermenu.png';
@@ -33,13 +33,19 @@
 
 
 <style>
+
+	.scroll-pane{
+padding-top: 1em;
+/*  */
+}
+::-webkit-scrollbar {
+width: 0px; 
+}
+
 #menu-items{
 display: flex;
 overflow-x: scroll;
-
 justify-items: space-around;
-
-
 background-color:whitesmoke;
 } 
 
@@ -75,7 +81,7 @@ background:black;
 		width:100%;
 		max-width:400px;
 		max-height:400px;
-  	transition: 0.125s;
+  		transition: 0.125s;
 	}
 	
 	.image:hover {
