@@ -1,11 +1,16 @@
 
-        <div class="container">
+<script>
+    import { enhance } from "$app/forms";
+    export let form;
+</script>
+        
+<div class="container">
 
             
-            <form action="action_page.php">
+            <form method='post' use:enhance>
                 <h1 id="contact-title"> CONTACT US</h1>
 
-                
+                <p>{form?.message || ''}</p>
                 <input type="text" id="fname" name="fname" placeholder="Your name..">
 
                 

@@ -11,6 +11,7 @@
 	"devDependencies": {
 		"@fontsource/fira-mono": "^4.5.10",
 		"@neoconfetti/svelte": "^1.0.0",
+		"@supabase/auth-helpers-sveltekit": "^0.8.6",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/adapter-node": "^1.0.0-next.104",
 		"@sveltejs/kit": "next",
@@ -21,6 +22,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@supabase/supabase-js": "^2.2.3",
 		"p5-svelte": "^3.1.2",
 		"vite": "^4.0.1"
 	}

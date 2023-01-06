@@ -1,6 +1,20 @@
-<script>
+<script lang='ts'>
 	import Header from '../lib/Header.svelte';
 	import '/src/lib/css/global.css';
+	import { invalidateAll } from '$app/navigation';
+	import { supabaseClient } from '$lib/supabase';
+	import {onMount} from 'svelte';
+	
+	onMount(()=>{
+		const{
+			data: {subscription}
+		} = supabaseClient.auth.onAuthStateChange(() => {
+			invalidateAll();
+		});
+		return () => {
+			subscription.unsubscribe();
+		};
+	});
 </script>
 
 <svelte:head>

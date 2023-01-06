@@ -4,6 +4,8 @@
 	import Service from '$lib/Service.svelte';
 	import Food from "$lib/Food.svelte";
 	import ContactForm from "$lib/ContactForm.svelte";
+	export let form; 
+$:console.log (form)
 </script>
 
 <svelte:head>
@@ -15,7 +17,7 @@
 <About />
 <Service />
 <Food /> 
-<ContactForm />
+<ContactForm {form} />
 
 <style>
 	
