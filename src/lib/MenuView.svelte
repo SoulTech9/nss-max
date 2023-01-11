@@ -1,7 +1,6 @@
 <script>
 	import {fade} from 'svelte/transition'
 
-	
 	let clicked ='';
   let img0 = '/images/brunchmenu.png';
   let img1 = '/images/appetizermenu.png';
@@ -64,7 +63,7 @@ background:black;
 
 		width:100%;
 		height:auto;
-		max-height:500px;
+		max-height:90vh;
 		object-fit: scale-down;
 	}
 	.close {

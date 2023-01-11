@@ -29,7 +29,7 @@
 
     {#if w > 560}
         <div class="menupic-row">
-            <img
+           <a class ='menupic-row'href="/menu"> <img
                 class="dimg"
                 alt="brunch menu"
                 in:fly|local={{ x: 400 }}
@@ -49,7 +49,7 @@
                 in:fly|local={{ x: -400 }}
                 out:fly|local={{ x: -400 }}
                 src="/images/dinner.jpg"
-            />
+            /></a>
         </div>
     {/if}
     <div class="menutext-row">
@@ -62,7 +62,7 @@
 <style>
     #ing3 {
         position: absolute;
-        width: 25%;
+        width: 20%;
         top: 100%;
         left: -6.5%;
         transform: rotate(50deg);
@@ -70,7 +70,7 @@
 
     #ing4 {
         position: absolute;
-        width: 12%;
+        width: 10%;
         top: 202%;
         left: 85%;
         transform: rotate(7deg); /*breaks page at 8deg or more*/
@@ -84,7 +84,7 @@
         background-color: white;
         background-image: url(/images/ft-food1.png);
         background-size: cover;
-        background-attachment: fixed;
+        /* background-attachment: fixed; */
         /* margin-bottom: 1.5em; */
         animation: flying 15s linear infinite alternate;
         font-family: "Roboto", sans-serif;
@@ -93,11 +93,11 @@
     }
     @keyframes flying {
         from {
-            background-size: 125%, 80%;
+            background-size: 100%;
         }
 
         to {
-            background-size: 130%, 115%;
+            background-size: 120%;
         }
     }
     .menupic-row {
@@ -116,8 +116,8 @@
     }
 
     .dimg {
-        max-width: 20em;
-        border: solid 8px;
+        max-width: 30%;
+        border: solid 7px;
         border-image-source: url(/images/bl123.jpg);
         border-image-slice: 10 30;
         animation: bordertxtr 5s linear infinite alternate;
@@ -143,5 +143,33 @@
     .amenu {
         text-decoration: none;
         color: #fff;
+    }
+
+    @media (max-width: 928px){
+        #ing4 {  
+        top: 250%;
+        }
+    }
+        @media (max-width: 836px){
+        #ing4 {  
+        top: 265%;
+        }
+    }
+    @media (max-width: 739px){
+        #ing4 {  
+        top: 275%;
+        }
+    }
+    @media (max-width: 677px){
+        #ing4 {  
+        top: 300%;
+        width: 12%;
+        }
+    }
+    @media (max-width: 526px){
+        #ing4 {  
+        top: 300%;
+        width: 12%;
+        }
     }
 </style>

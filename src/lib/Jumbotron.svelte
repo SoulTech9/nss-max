@@ -9,8 +9,8 @@
     
     {#if u > -1 }         
      
-     <p class="heading1" in:fly|local={{ y: -400,duration: 800 }} out:fly|local={{x:-400, duration: 2000}} > CH-CHEF <br/> HELLO !!!</p> 
-     <button id='order' type= 'button'in:fly|local={{ y: 400,duration: 800 }} out:fly|local={{x:-400, duration: 2000}} > CONTACT US</button>
+     <p class="heading1" in:fly|local={{ y: -400,duration: 800 }} out:fly|local={{x:-400, duration: 2000}} > CH-CHEF <br/> HELLO !!!</p><a href="/contact">
+     <button id='order' type= 'button'in:fly|local={{ y: 400,duration: 800 }} out:fly|local={{x:-400, duration: 2000}} > CONTACT US</button></a>
      {/if}
     </div>
     </div>
@@ -44,43 +44,79 @@
         font-weight: bolder;
         opacity: .95;
     } 
-    
+    #order:hover{
+        cursor: pointer;
+        color: #dfaf37;
+        border: 1px solid #dfaf37;
+    }
     
 #jumbotron {
     position: relative;
     display: flex;
     z-index: 0;
     background-image: url(/images/Jumbotron/bgmax.jfif);
-    background-size: 110%, 115%;
+    background-size: 110%;
     transition: background-size 15s linear;
     background-position: center;
     /* margin-bottom: 1rem; */
     animation: flying 15s linear infinite alternate;
-    background-attachment: fixed;
+    background-attachment:cover;
     width: 100% ;
     height: 40em;
     /* bottom: 3.2em; */
     overflow: hidden;
-
    
     
 }
 
 @keyframes flying {
     from {
-        background-size: 110%, 80%;
+        background-size: 100%;
     }
 
     to {
-        background-size: 125%, 115%;
+        background-size: 115%;
     }
 }
 
-/* #core-tron {
-    padding-left: 10%;
-    width: 80%;
-    z-index: 1;
+@media (max-width:914px){
+    #jumbotron{
+        height: 60vh;
+    }
+    .heading1{
+        top: 15%;
+        left: 25%;
+    }
+    #order{
+        left: 40%
+    }
+}
 
-} */
+@media (max-width:768px){
+    #jumbotron{
+        height: 50vh;
+    }
+    .heading1{
+        top: 2%;
+        align-self: center;
+    }
+ 
+}
+
+@media (max-width:591px){
+    .heading1{
+        font-size: 70px;
+        top: 10%;
+    }    
+    #jumbotron{height:40vh;
+
+}
+
+    }
+    @media(max-width:512px){
+        #jumbotron{height:30vh;
+
+        }
+    }
 
 </style>

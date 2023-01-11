@@ -24,6 +24,7 @@
 	"dependencies": {
 		"@supabase/supabase-js": "^2.2.3",
 		"p5-svelte": "^3.1.2",
+		"svelte-hamburgers": "^4.0.1",
 		"vite": "^4.0.1"
 	}
 }

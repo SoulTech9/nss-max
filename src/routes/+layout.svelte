@@ -3,8 +3,9 @@
 	import '/src/lib/css/global.css';
 	import { invalidateAll } from '$app/navigation';
 	import { supabaseClient } from '$lib/supabase';
-	import {onMount} from 'svelte';
 	
+	import {onMount} from 'svelte';
+
 	onMount(()=>{
 		const{
 			data: {subscription}
@@ -30,11 +31,13 @@
 
 <div class="app">
 	<Header />
-
+	
 	<main>
+		
 		<slot />
+		
 	</main>
-
+	
 	<footer>
 		<p>Never Stay Starving, Inc.   All Rights Reserved 2023. </p>
 	</footer>
